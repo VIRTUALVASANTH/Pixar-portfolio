@@ -1,0 +1,38 @@
+{
+  "url": "http://127.0.0.1:8081/",
+  "viewports": {
+    "desktop": {
+      "width": 1280,
+      "height": 800,
+      "status": 200,
+      "title": "Vasanth's World",
+      "hasCanvas": false,
+      "bodyTextLen": 155,
+      "bodyTextHash": "64ef138ee76880acbdcbe9008c73a2ce0898a51834d90e15e20763ef4ff4b72f",
+      "bodyTextPrefix": "Vasanth's World — an immersive cinematic portfolio A ROOM, WAITI",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built.png"
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "status": 200,
+      "title": "Vasanth's World",
+      "hasCanvas": false,
+      "bodyTextLen": 155,
+      "bodyTextHash": "653dde249e2e15c6e813af71a555d4c9f2aa55b395236af441519e6f228a1cd1",
+      "bodyTextPrefix": "Vasanth's World — an immersive cinematic portfolio A ROOM, WAITI",
+      "horizontalOverflow": false,
+      "consoleErrors": [],
+      "pageErrors": [],
+      "screenshot": "/workspace/screenshots/app-builder-built-mobile.png"
+    }
+  },
+  "brandWarnings": [],
+  "authWarnings": [],
+  "verdictFile": "/workspace/screenshots/app-builder-built.json",
+  "divergesFromBaseline": false,
+  "baselineReasons": []
+}
