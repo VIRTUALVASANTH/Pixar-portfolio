@@ -30,7 +30,7 @@ const APPS = [
   { id: "skills", label: "Skills", icon: Sparkles },
   { id: "experience", label: "Experience", icon: Briefcase },
   { id: "education", label: "Education", icon: GraduationCap },
-  { id: "certs", label: "Seals", icon: Award },
+  { id: "certs", label: "Toolkit", icon: Award },
   { id: "contact", label: "Contact", icon: Mail },
 ] as const;
 
@@ -194,7 +194,7 @@ function AppBody({ id }: { id: AppId }) {
           <p className="mt-5 max-w-prose text-sm leading-relaxed text-paper-dim">{PERSON.summary}</p>
           <dl className="mt-6 grid grid-cols-2 gap-3 text-sm">
             <Stat k="Years" v={`${PERSON.years}+`} />
-            <Stat k="Focus" v="Real-time story" />
+            <Stat k="Focus" v={PERSON.focus} />
             <Stat k="Status" v={PERSON.availability} />
             <Stat k="Mail" v={PERSON.email} />
           </dl>
@@ -322,7 +322,7 @@ function ContactForm() {
     <div className="max-w-lg">
       <p className="font-display text-3xl text-paper">Leave a note on the desk.</p>
       <p className="mt-2 text-sm text-paper-dim">
-        It stays on this machine — a paperweight, not a server. For real mail: {PERSON.email}
+        It stays on this machine — a paperweight, not a server. For real mail: {PERSON.email} · {PERSON.phone}
       </p>
       {sent ? (
         <p className="mt-8 font-display text-xl text-amber">Tucked under the keyboard. Thank you, {name || "friend"}.</p>

@@ -96,7 +96,7 @@ export function Experience() {
 
   return (
     <main className="relative h-dvh w-full overflow-hidden bg-ink text-paper">
-      <h1 className="sr-only">Vasanth's World — an immersive cinematic portfolio</h1>
+      <h1 className="sr-only">Vasanth G — Backend Java Developer, an immersive cinematic portfolio</h1>
       {World ? <World /> : <div className="absolute inset-0 bg-ink" />}
       <Overlays />
     </main>

@@ -177,15 +177,24 @@ function Pages({ id }: { id: BookId }) {
     <div className="max-w-lg">
       <p className="font-display text-3xl">{PERSON.availability}</p>
       <p className="mt-4 text-base leading-relaxed text-ink/80">
-        Write to <span className="text-wood">{PERSON.email}</span>. Tell me about the room you want to
-        build — a product, a film companion, a place that should feel like it has a pulse.
+        Write to <span className="text-wood">{PERSON.email}</span> or call{" "}
+        <span className="text-wood">{PERSON.phone}</span>. Banking platforms, auth,
+        latency — tell me what is on fire.
       </p>
-      <a
-        href={`mailto:${PERSON.email}`}
-        className="mt-8 inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-sm text-paper transition-transform duration-150 active:scale-[0.96]"
-      >
-        Send a letter
-      </a>
+      <div className="mt-8 flex flex-wrap gap-3">
+        <a
+          href={`mailto:${PERSON.email}`}
+          className="inline-flex min-h-11 items-center rounded-full bg-ink px-5 text-sm text-paper transition-transform duration-150 active:scale-[0.96]"
+        >
+          Send a letter
+        </a>
+        <a
+          href={PERSON.phoneHref}
+          className="inline-flex min-h-11 items-center rounded-full border border-ink/20 px-5 text-sm text-ink transition-transform duration-150 active:scale-[0.96]"
+        >
+          Call
+        </a>
+      </div>
     </div>
   );
 }

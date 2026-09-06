@@ -9,15 +9,18 @@ export type BookId =
 
 export const PERSON = {
   name: "Vasanth",
-  fullName: "Vasanth Kumar",
-  title: "Creative Technologist",
-  tagline: "I build rooms you can feel.",
-  location: "Chennai · Remote",
-  email: "hello@vasanth.world",
-  availability: "Open to cinematic collaborations",
-  years: 7,
+  fullName: "Vasanth G",
+  title: "Backend Java Developer",
+  tagline: "I keep banking services honest under load.",
+  location: "Bengaluru",
+  email: "vasanth.g.1503@gmail.com",
+  phone: "+91 95389 81528",
+  phoneHref: "tel:+919538981528",
+  availability: "Open to backend and platform roles",
+  years: 1,
+  focus: "Spring Boot · Kafka · Keycloak",
   summary:
-    "I design and engineer immersive digital spaces — the kind that linger after the tab is closed. Seven years across product, film-adjacent web, and real-time 3D, always chasing the moment a interface becomes a place.",
+    "Backend Java developer with 1+ year building and maintaining microservices in a production banking environment. Spring Boot, Dapr, Kafka, and Keycloak by day; secure REST APIs and production incidents by night. CI/CD on Jenkins, containers on Docker and OpenShift/Kubernetes, load tests on JMeter.",
 };
 
 export const BOOKS: Array<{
@@ -44,7 +47,7 @@ export const BOOKS: Array<{
     id: "skills",
     title: "Skills",
     spine: "Skills",
-    subtitle: "Craft, tools, and instincts",
+    subtitle: "Languages, platforms, instincts",
     color: "#1f4a4a",
     accent: "#b7e0d4",
     shelf: 2,
@@ -54,7 +57,7 @@ export const BOOKS: Array<{
     id: "projects",
     title: "Projects",
     spine: "Works",
-    subtitle: "Worlds that shipped",
+    subtitle: "Systems that shipped",
     color: "#8a3b22",
     accent: "#f0c08a",
     shelf: 2,
@@ -82,9 +85,9 @@ export const BOOKS: Array<{
   },
   {
     id: "certs",
-    title: "Certifications",
-    spine: "Seals",
-    subtitle: "Marks of practice",
+    title: "Toolkit",
+    spine: "Tools",
+    subtitle: "How the work is kept honest",
     color: "#5c2438",
     accent: "#f0c0cc",
     shelf: 1,
@@ -104,146 +107,116 @@ export const BOOKS: Array<{
 
 export const SKILL_GROUPS = [
   {
-    name: "Real-time & 3D",
+    name: "Backend & Java",
     skills: [
-      { name: "Three.js / R3F", level: 94 },
-      { name: "WebGL / GLSL", level: 86 },
-      { name: "Blender look-dev", level: 78 },
-      { name: "Lighting & cinematography", level: 90 },
+      { name: "Java / Spring Boot", level: 90 },
+      { name: "Spring Security", level: 86 },
+      { name: "REST API design", level: 88 },
+      { name: "Dapr (service mesh)", level: 80 },
     ],
   },
   {
-    name: "Product engineering",
+    name: "Messaging & auth",
     skills: [
-      { name: "React / TypeScript", level: 96 },
-      { name: "Motion (GSAP / FM)", level: 92 },
-      { name: "Node / Python", level: 80 },
-      { name: "Design systems", level: 88 },
+      { name: "Apache Kafka", level: 84 },
+      { name: "Keycloak (OIDC / FIDO / SSO)", level: 88 },
+      { name: "JWT / RBAC / sessions", level: 86 },
+      { name: "Redis / Valkey", level: 82 },
     ],
   },
   {
-    name: "Story & sound",
+    name: "Data, DevOps & quality",
     skills: [
-      { name: "Interactive narrative", level: 91 },
-      { name: "Spatial / adaptive audio", level: 76 },
-      { name: "Art direction", level: 84 },
-      { name: "Prototyping", level: 92 },
+      { name: "PostgreSQL / SQL", level: 88 },
+      { name: "Docker · K8s · OpenShift", level: 80 },
+      { name: "Jenkins CI/CD", level: 78 },
+      { name: "JUnit 5 · JMeter · Grafana", level: 84 },
     ],
   },
 ];
 
 export const PROJECTS = [
   {
-    id: "lantern",
-    name: "Paper Lantern",
+    id: "cryptovault",
+    name: "CryptoVault",
     year: "2025",
-    role: "Director of engineering",
+    role: "Secure crypto wallet",
     blurb:
-      "A WebGL story engine for illustrated books. Pages breathe, ink dries, and chapters remember how you held them.",
-    stack: ["Three.js", "GSAP", "Web Audio", "React"],
+      "A multi-service wallet platform — API gateway, auth, wallet, and transactions — with Keycloak RBAC, AES-256-GCM private-key storage, Redis balance caching, Kafka-backed async processing, and Sepolia testnet ETH transfers.",
+    stack: ["Java", "Spring Boot", "Keycloak", "Kafka", "PostgreSQL", "Redis"],
     hue: "#c4843a",
   },
   {
-    id: "atlas",
-    name: "Northwind Atlas",
-    year: "2024",
-    role: "Creative technologist",
+    id: "esl",
+    name: "ESL Price Engine",
+    year: "2025",
+    role: "Data engineering intern",
     blurb:
-      "A 3D climate-data experience that turns satellite years into a single golden afternoon over the polar sea.",
-    stack: ["R3F", "d3", "Mapbox", "GLSL"],
+      "Python microservices on Flask that push real-time price updates to electronic shelf labels, with scheduling dashboards, AI-based pricing, Docker/GitHub Actions CI/CD, and PostgreSQL for low-latency reads.",
+    stack: ["Python", "Flask", "PostgreSQL", "Docker", "GitHub Actions"],
     hue: "#3d6b6b",
   },
   {
-    id: "ember",
-    name: "Ember Terminal",
-    year: "2024",
-    role: "Solo",
+    id: "banking",
+    name: "Core Banking Auth",
+    year: "2025",
+    role: "Production microservices",
     blurb:
-      "A cinematic desktop metaphor for portfolios — windows as memories, folders as rooms, boot-up as overture.",
-    stack: ["React", "Framer Motion", "Canvas"],
+      "Four Spring Boot services for authentication, authorization, device management, and session control on a live banking platform. Keycloak FIDO/passkeys and SSO, Redis/Valkey sessions, Dapr, Kafka, and an 89% latency cut (900ms → 80ms).",
+    stack: ["Spring Boot", "Keycloak", "Dapr", "Kafka", "PostgreSQL", "OpenShift"],
     hue: "#8a3b22",
-  },
-  {
-    id: "orbit",
-    name: "Quiet Orbit",
-    year: "2023",
-    role: "Sound + visuals",
-    blurb:
-      "A spatial-audio meditation where constellations rearrange around your cursor and the room hushes with you.",
-    stack: ["Web Audio", "Three.js", "Tone.js"],
-    hue: "#24344d",
-  },
-  {
-    id: "grain",
-    name: "Frame & Grain",
-    year: "2023",
-    role: "Open source",
-    blurb:
-      "A film-look toolkit for the web: halation, gate weave, and print stock as CSS and shader primitives.",
-    stack: ["GLSL", "Postprocessing", "CSS"],
-    hue: "#5c2438",
   },
 ];
 
 export const EXPERIENCE = [
   {
-    company: "Studio North",
-    role: "Senior Creative Technologist",
-    years: "2023 — Present",
-    place: "Remote",
+    company: "i-exceed Technology Solutions",
+    role: "Backend Engineer",
+    years: "Jun 2025 — Present",
+    place: "Production banking",
     points: [
-      "Lead immersive web for film, culture, and product launches.",
-      "Shipped three award-listed 3D brand worlds with 60fps on mid-range laptops.",
-      "Built an in-house lighting rig and camera language now used across the studio.",
+      "Engineer and maintain 4+ Spring Boot microservices for authentication, authorization, device management, and session control.",
+      "Architect end-to-end auth with Keycloak (FIDO/passkey, SSO, admin roles); Redis and Valkey for token storage and fast session lookups.",
+      "Cut API latency ~89% (900ms → 80ms) with PostgreSQL indexes and N+1 rewrites; trace with Grafana, Tempo, and Loki; load-test with JMeter.",
+      "Hold 95% test coverage with JUnit 5, Mockito, and SonarQube; close critical production bugs.",
+      "Integrate Dapr for inter-service calls and Kafka for event-driven pub/sub; ship on OpenShift/Kubernetes via Jenkins CI/CD.",
+      "Run TruffleHog, Vacuum, ArchUnit, and Arconia across the development workflow.",
     ],
   },
   {
-    company: "Frame & Folly",
-    role: "Interactive developer",
-    years: "2021 — 2023",
-    place: "Bengaluru",
+    company: "Einweit Technologies",
+    role: "Data Engineer Intern",
+    years: "Feb 2025 — May 2025",
+    place: "Internship",
     points: [
-      "Crafted scroll-driven stories and WebGL product configurators.",
-      "Partnered with directors to translate animatics into real-time scenes.",
-      "Mentored a small frontend pod on motion, accessibility, and performance.",
-    ],
-  },
-  {
-    company: "Helix Labs",
-    role: "Frontend engineer",
-    years: "2019 — 2021",
-    place: "Chennai",
-    points: [
-      "Designed the component system behind a design-ops platform.",
-      "Introduced cinematic onboarding that lifted activation 18%.",
+      "Built Python/Flask microservices to automate real-time price updates for electronic shelf labels, with scheduling dashboards and AI-based pricing.",
+      "Designed CI/CD with Docker and GitHub Actions; delivered low-latency data paths on PostgreSQL.",
     ],
   },
 ];
 
 export const EDUCATION = [
   {
-    place: "National Institute of Technology",
-    credential: "B.Tech, Computer Science",
-    years: "2015 — 2019",
-    note: "Thesis on real-time global illumination approximations for the browser.",
-  },
-  {
-    place: "CGMA",
-    credential: "Lighting for Animation",
-    years: "2020",
-    note: "Cinematic lighting, color script, and mood — the language this room speaks.",
+    place: "Sapthagiri College of Engineering",
+    credential: "B.E. Computer Science",
+    years: "Dec 2021 — May 2025",
+    note: "CGPA 8.68. The years the compiler finally started to listen.",
   },
 ];
 
 export const CERTS = [
-  { name: "Three.js Journey", by: "Bruno Simon", year: "2022" },
-  { name: "Google UX Design", by: "Coursera", year: "2021" },
-  { name: "AWS Cloud Practitioner", by: "Amazon", year: "2023" },
-  { name: "Advanced WebGL", by: "The Book of Shaders lab", year: "2024" },
+  { name: "JUnit 5 · Mockito", by: "95% coverage on banking services", year: "Testing" },
+  { name: "SonarQube", by: "Quality gates on every merge", year: "Quality" },
+  { name: "JMeter", by: "Load tests before production", year: "Performance" },
+  { name: "Grafana · Tempo · Loki", by: "Traces, logs, and the 89% latency cut", year: "Observability" },
+  { name: "ArchUnit", by: "Architecture tests that fail the build", year: "Architecture" },
+  { name: "TruffleHog · Vacuum", by: "Secret scanning and API linting", year: "Security" },
+  { name: "Arconia", by: "Spring Boot / Maven dependency hygiene", year: "Platform" },
+  { name: "Jenkins · OpenShift", by: "CI/CD onto Kubernetes", year: "DevOps" },
 ];
 
 export const ABOUT_PAGES = [
-  "I grew up in rooms like this one — late light, a desk that hummed, books that were more doors than objects. I never really left.",
-  "My work sits where software meets set design. I care about the weight of a camera move, the honesty of a material, the way a click can feel like turning a key.",
-  "If you are building something that should feel alive — a product, a film companion, a place on the web — the kettle is on. Come in.",
+  "I write Java for rooms where money moves. Microservices, tokens, sessions — the unglamorous machinery that has to be right at 2 a.m.",
+  "At i-exceed I live in a core banking platform: Keycloak at the door, Kafka in the hallway, PostgreSQL in the cellar. I like shaving 900 milliseconds down to 80.",
+  "If you need someone who treats auth, latency, and tests as the same craft — the kettle is on. Come in.",
 ];
